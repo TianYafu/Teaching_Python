@@ -1,0 +1,152 @@
+%注意保存的文件名不能有中文
+%编译方式:XeLaTeX    
+        
+\documentclass[12pt,a4paper]{article}  
+	\usepackage{xeCJK}	%中文环境
+		\usepackage{float}	%支持浮动体参数H(大写)
+%注意右下角换成utf-8的
+\usepackage{graphicx}	%插图命令包
+    \setCJKmainfont{SimSun}	%设置字体
+\usepackage{titlesec}	
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{listings}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\newfontfamily\arial{Arial}
+\newcommand{\sectionfontsize}{\fontsize{12pt}{12pt}\selectfont}
+%\titleformat{\section}[hang]{\bfseries\arial\sectionfontsize}{\thesection}{1em}{}{}
+
+
+\title{需求文档(2)}	%题目作者日期
+\author{田雅夫}
+\date{\today}
+\bibliographystyle{plain}	%参考文献格式
+
+
+\begin{document}
+\maketitle
+
+\begin{figure}[H]
+1.给定一个正整数m,实现m的阶乘
+
+\end{figure}
+
+\begin{figure}[H]
+2,给定一个正整数m,找出比m小的所有质数
+
+\end{figure}
+
+\begin{figure}[H]
+3.已知一个网站图片的URL格式如下:
+\begin{quote}
+$url:http://www.python.org/s/pic/***/*******$
+\end{quote}
+
+其中***部分取值为000至233,*******部分为a00001到a00005,b00001到b00005\dots,e00001到e00005
+\begin{enumerate}
+\item 建立两个列表,第一个列表中元素为[000,233]中正整数,第二个列表中为a00001到a00005,b00001到b00005\dots,e00001到e00005中所有元素.
+\item 格式输出所有的图片URL
+\end{enumerate}
+\end{figure}
+
+\begin{figure}[H]
+4.用有序单链表表示集合，实现集合的交、并和差运算。
+ 对集合中的元素，用有序单链表进行存储。
+\end{figure}
+
+\begin{figure}[H]
+5.设有编号为1,2,…,n的n（n＞0）个人围成一个圈，每个人持有一个密码m。从第一个人开始报数，报到m时停止报数，报m的人出圈，再从他的下一个人起重新报数，报到m时停止报数，报m的出圈，……，如此下去，直到所有人全部出圈为止。当任意给定n和m后，设计算法求n个人出圈的次序。
+
+\end{figure}
+
+\begin{figure}[H]
+6.实现栈,队列,循环列表三种数据结构:
+
+要求:定义函数实现入栈,出栈,如队列,出队列,自行决定演示方式.
+
+\end{figure}
+
+\begin{figure}[H]
+7.二叉树的一个节点可以看做一个列表[节点编号,节点值,左孩子,右孩子],这样的话一个二叉树可以变成一个二维列表.试着生成如下的一棵二叉树.
+\includegraphics[scale=1.0]{bitree.pdf}
+
+\end{figure}
+
+\begin{figure}[H]
+8.下面生成二维数组的代码是错误的(它确实可以生成二维数组但它是错误的),请分析它错误在哪里.改正代码使其正确.
+\begin{lstlisting}[language=Python]
+a = []
+def matrix(n):
+    vector = [0]*n
+    for i in range(n):
+        a.append(vector)
+\end{lstlisting}
+\end{figure}
+
+\begin{figure}[H]
+9.冒泡排序,插入排序或是任意一种排序算法排序以下列表:
+
+[1,7,3,9,2,4,8,2,5,7,4,3]
+
+\end{figure}
+
+\begin{figure}[H]
+10.验证码解析装置: 
+
+有如下的验证码:
+
+A23D-36CA-84SE-57EW
+
+该验证码以一整个字符串形式输入,要求
+\begin{enumerate}
+\item 1.将该验证码以列表形式储存,列表形式如下["A23D","36CA","84BC","57DA"]
+\item 2.A对应:"14",B对应"23",C对应"8",D对应"25",将字符串翻译成["142325","36814","84238","572514"]
+\item 3.将这四个字符串用int(a)语句转换成整型,并将其值相加,得到加和后的结果.
+
+\end{enumerate}
+
+\end{figure}
+
+
+    \end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

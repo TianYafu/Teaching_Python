@@ -1,0 +1,254 @@
+%注意保存的文件名不能有中文
+%编译方式:XeLaTeX    
+        
+\documentclass[12pt,a4paper]{article}  
+	\usepackage{xeCJK}	%中文环境
+		\usepackage{float}	%支持浮动体参数H(大写)
+%注意右下角换成utf-8的
+\usepackage{graphicx}	%插图命令包
+    \setCJKmainfont{SimSun}	%设置字体
+\usepackage{titlesec}	
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{listings}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\newfontfamily\arial{Arial}
+\newcommand{\sectionfontsize}{\fontsize{12pt}{12pt}\selectfont}
+%\titleformat{\section}[hang]{\bfseries\arial\sectionfontsize}{\thesection}{1em}{}{}
+
+
+\title{Python编程基础教学计划}	%题目作者日期
+\author{田雅夫}
+\date{\today}
+\bibliographystyle{plain}	%参考文献格式
+
+
+\begin{document}
+
+\maketitle
+\section{教学目标}
+\subsection{知识性目标}
+\begin{enumerate}
+\item 了解Python
+\item Python基本开发环境的构建
+\item 基础语法,操作.
+\item 列表推导和简单的 $\lambda$演算
+\item 字符串,元组和字典
+\item OOP编程,类,对象和方法.
+\item 文件操作
+\item 调试的技巧
+\item 简单实用的标准库操作
+\item 简单的GUI构建
+\item 串口库的使用
+\item 建立自己的工程
+\end{enumerate}
+
+\subsection{能力性目标}
+\begin{enumerate}
+\item 良好代码缩进的能力
+\item 良好的命名风格
+\item 良好的注释习惯
+\item 代码抽象,封装的能力
+\item 根据需求编写代码的能力
+\item 代码调试,改正的能力
+
+\end{enumerate}
+
+\section{教学地点,时数,条件}
+\subsection{地点}
+21B058教室
+
+\subsection{学时数}
+大概有10个晚上,每个晚上2-3个课时.期望有25个课时.
+
+\subsection{教学条件}
+面向的成员以大一的居多,兼有部分大二的学生.大一新生因为刚考完C语言的因素对其还比较熟悉,大二学生的程度则不好掌控.同时经观察发现这些成员在变量命名,代码缩进(因为Python语言特性所以缩进特别重要),代码封装方面的习惯尚有很大的改进空间.
+
+\subsection{需要的条件}
+\begin{enumerate}
+\item 需要网络以保证学员可以即时参考资料
+\item 一本教材/手册/学案(我打算自己写一本)\
+\item 一套可供学员即时提交代码并展示的系统(远程桌面?)
+\end{enumerate}
+
+
+\section{教学方法}
+用尽可能精简的方式讲解,尽可能多的练习.
+
+每次的授课预期分成下面几个方面:
+\subsection{讲解部分}
+每次的讲解时间不会长于一课时.(我争取...)
+
+讲解的内容尽可能少的实际操作的原理,而是力图讲清楚每一个命令是怎么用的,是干什么用的.
+
+对于教材的选择我认为应尽量精简,只给他们可能用到的部分.这种教材的作用与技术手册是一致的,在后面操作环节中学员将依托手册中的内容编制程序.
+
+\subsection{操作部分}
+
+我会写足够的题目,就以需求的方式给出.确保每个学员拿到的需求都是不相同的,根据这些需求让他们现场编制程序.在这个过程中他们可以参考所有的资料(包括网络).但不可以相互交流.提问是允许的.
+
+对于能力较强的学员,可以下发其他人的需求文档让其多编写一些程序.
+
+\subsection{讲解部分}
+
+让每一个人上台讲解其刚才编制的程序,讲解时间尽量短,尽量精炼.在这个过程中其他学员对自己程序的修改是禁止的以保证其认真听讲解.
+对完成任务的学员应有奖励措施(完成的多的学员如果是男生可送一个月迅雷会员).
+
+对没有完成需求的学员要求其讲明在那个位置出错或bug可能出现的位置(讲了调试技巧以后要求定位出错位置).如果学员成功定位出错位置则给予讲解(鼓励其他学员上来debug).\\
+
+对于当天没有实现需求的学员要求在第二天上课前改正并检查.
+
+\subsection{作业}
+
+再给每个学员一个需求文档让其编制程序.对于作业的检查可以采用互评的方法(这里我也不大明白要怎么办,总之让他们尽可能多的写代码,读代码与debug)
+
+\section{每个模块的教学任务}
+
+\subsection{了解Python}
+\begin{enumerate}
+\item Python与C的差别
+\item 解释器语言的特点
+\item 弱类型语言要注意的事项
+\item 良好的代码风格
+
+\end{enumerate}
+
+\subsection{Python基本开发环境的构建}
+本次教学拟使用$windows+Python2.7+IDLE$的工具链.同时演示环境为$OpenSUSE+Python2.7+Vim$.\\
+
+之所以使用Windows而不是Linux是要贴合绝大多数成员的使用习惯.同时应任昕旸强烈要求使用OpenSUSE这个发行版作为演示环境.用Vim作为演示环境同样来自他的建议.\\
+
+对于IDE的选择我认为IDLE就已经足够了.首先它是Python自带的IDE,而且干净轻量实用,不需要过多的配置.Ipython可能在Shell命令的支持方面优于Python但是安装起来实在是太麻烦.Vim由于学习成本的考量此次不采用.
+
+\subsection{基础语法和操作}
+本次教学拟讲解如下几个方面:
+\begin{enumerate}
+\item 交互模式与脚本模式
+\item 格式输入与输出
+\item 变量类型与类型转换
+\item 操作符与表达式
+\item 定义函数
+\item 条件和递归
+\item while循环
+
+\end{enumerate}
+
+\subsection{列表推导和简单的 $\lambda$演算}
+本次教学拟讲解如下几个方面:
+\begin{enumerate}
+\item 列表类型
+\item 列表操作(映射,遍历,拼接)
+\item for 循环语句
+\item 列表方法(in,append,切片,extend,sum,pop,del,remove)
+\item 列表与字符串的转化
+\item 简单的列表推导(map,reduce,filter)
+\end{enumerate}
+
+\subsection{字符串,元组和字典}
+这一块简单讲讲即可:
+\begin{enumerate}
+\item 可变类型与不可变类型
+\item 字符串方法
+\item 简单的正则表达式(这块就是拓展...)
+\item 字典的使用
+\item 元组的使用
+
+\end{enumerate}
+
+\subsection{OOP编程,类,对象和方法}
+讲完Python的四大结构以后OOP编程的思想就非常显然了.因为列表,串,元组和字典都是类
+\begin{enumerate}
+\item 类和对象的简介
+\item 定义类和构造对象
+\item 使用内置方法
+\item 自定义方法
+\item 简单数据结构的OOP实现                                                                               
+
+\end{enumerate}
+
+\subsection{文件的操作}
+这一块我认为不用讲的很深入,但是应该辅以大量的练习.因为对文件的存取操作会很频繁的出现在以后的工作中.
+
+要讲的部分:
+\begin{enumerate}
+\item 打开/关闭/创建文本文件
+\item 读/写文本文件
+\item os.path模块解析路径/获取文件信息
+\item linecathe模块按行读取文件
+\item tempfile模块建立临时文件
+\item 其他文件操作(删除,重命名,创建多级目录/目录树)
+\item 遍历目录
+
+\end{enumerate}
+
+\subsection{调试的技巧}
+在这一阶段所有的学员应该都有一定的编码经验而且犯过一定量的错误了,所以这个时候讲一点有关于调试的小技巧应该是非常适合的.如果将这一模块提前可能学员不会有足够的编程经验来理解这些技巧.不讲这些模块的话后面相对复杂的部分实现起来可能会有困难.这一块的学习应该仍以时间为主,也就是不断地定位错误及改错.
+要讲的部分:
+\begin{enumerate}
+\item print 调试
+\item reload调试
+\item try/catch抛出异常
+\item 设置断点
+\end{enumerate}
+
+\subsection{简单实用的标准库操作}
+在前面其实已经用到一部分标准库的内容了,在这里介绍其他一部分可能用得到的:
+\begin{enumerate}
+\item 文本处理
+\item 数组,列表,堆
+\item 系统时间,代码执行时间
+\item 简单的网络访问
+\item 其他需要的或者有意思而且简单的库函数
+\end{enumerate}
+
+\subsubsection{简单的GUI构建}
+这个部分拟简单的讲解一下Thinker的操作和使用.不涉及自定义控件.如果时间及其重组的话会介绍一下QT(仅仅是介绍一下).
+
+\subsection{串口库的使用}
+这个部分主要介绍一下如何使用serial模块实现串口通信,联系一下用电脑当做上位机控制单片机工作.
+\subsection{建立自己的工程}
+在这个部分拟设计一个比较复杂的情境,让学员自己写一个程序控制单片机实现比较复杂的任务.\\
+条件允许的话将该程序用GUI封装,留出GUI.让学员自为自己的程序编写文档和说明.
+
+    \end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

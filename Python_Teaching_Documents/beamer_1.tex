@@ -1,0 +1,280 @@
+\documentclass{beamer}  
+\usetheme{CambridgeUS}  
+\usepackage[UTF8,noindent]{ctexcap}
+\usepackage{fontspec}  
+%\setsansfont{楷体} % font name is case-sensitive  
+       
+\begin{document}  
+\title{Python入门训练}  
+\subtitle{[0].Python基本操作}
+\author{田雅夫}
+\institute{控制模型创新实验室}
+\date{\today}
+\frame{\titlepage}  
+    \begin{frame} {教学计划}{知识,技能和训练}
+
+    \begin{itemize}  
+    \item Python知识的学习  
+    \item 良好的习惯与代码风格
+    \item 足够的熟练程度 
+	\end{itemize}  
+	\end{frame}  
+\section{Python知识的学习}
+
+
+\begin{frame}{为什么是Python}
+\begin{enumerate}
+\item 脚本式语言
+\item 快速开发
+\item 简单,容易上手
+\item 大量好用的外部库,详细的文档,例程
+\item 易于调试,维护
+\item 发展前景良好
+
+\end{enumerate}
+
+\end{frame}
+
+
+\subsection{知识性目标}
+\begin{frame}{知识性目标}
+\begin{enumerate}
+\item 了解Python
+\item Python基本开发环境的构建
+\item 基础语法,操作.
+\item 列表推导和简单的 $\lambda$演算
+\item 简单的GUI构建
+\item 串口库的使用
+\item 字符串,元组和字典
+\item OOP编程,类,对象和方法.
+\item 文件操作
+\item 调试的技巧
+\item 简单实用的标准库操作
+\item 建立自己的工程
+\end{enumerate}
+\end{frame}
+
+\subsection{能力性目标}
+\begin{frame}{能力性目标}
+\begin{enumerate}
+\item 良好代码缩进的能力
+\item 良好的命名风格
+\item 良好的注释习惯
+\item 代码抽象,封装的能力
+\item 根据需求编写代码的能力
+\item 代码调试,改正的能力
+
+\end{enumerate}
+\end{frame}
+
+\subsection{工程目标}
+
+\begin{frame}{工程目标}
+\begin{enumerate}
+\item 用Python实现串口通信
+\item 用Python作为上位机控制STM32
+\item 基于STM32控制流水灯,电机,舵机\dots
+\item 用GUI封装控制程序
+\item 编写产品说明,文档,帮助文件
+\end{enumerate}
+\end{frame}
+
+\section{学习方法}
+\begin{frame}
+我知道刚才讲的东西有很多你们都不明白,例如串口,例如GUI,例如元组,字典,OOP\dots\\
+
+程序设计不是单单凭借听课就能够理解的,必须要写代码,写大量的代码.用的多了自然就明白了.
+\end{frame}
+
+\begin{frame}{学习方法}
+\begin{itemize}
+\item 每次讲课我只讲重要的,容易出错的部分
+\item 用大量的时间来编写各种各样的程序
+\item 编写程序的过程中可以参考任何资料,但必须独立完成.
+\item 上台讲解你所编写的程序
+
+\end{itemize}
+\end{frame}
+\section{基础开发环境}
+\section{Python开发环境的构建}
+\begin{frame}{安装windows下32位Python}
+\begin{enumerate}
+\item 双击安装
+\item 添加环境变量
+\item 在命令行下启动Python
+\item 启动IDLE
+\item 建立一个存放代码的文件夹
+\item 保护眼睛的字体和配色方案
+\item 动手吧\dots
+\end{enumerate}
+
+
+\end{frame}
+
+\section{交互模式和脚本模式}
+
+\begin{frame}{交互模式}
+\begin{itemize}
+\item 方便的调试模块
+\item 程序输出的地方
+\item 写错了怎么办?
+\item 完全没办法保存啊
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{脚本模式}
+\begin{itemize}
+\item 可以重用的脚本
+\item 重用以前的脚本
+\item 保存的时候注意事项
+\item 运行你的脚本
+
+\end{itemize}
+
+\end{frame}
+
+\section{基本操作}
+
+\begin{frame}{变量}
+
+\begin{enumerate}
+\item 使用变量前完全不用定义类型
+\item 但是要声明以及赋初值
+\item 不定义类型也不见得就是好事,指不定什么时候类型就悄悄地改变了呐\dots
+\item 有些地方因为用的太频繁所以声明和初值都省略了...
+\item 解释器语言变量的作用域
+\item 变量名称变颜色的话,最好换一个.
+\item 不要用两个下划线开头
+\item type语句十分有用
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{格式输入与输出}
+\begin{enumerate}
+\item print,没有f
+\item 用逗号的话可以不换行
+\item C语言的格式输出还是有效的
+\item 输入语句更简洁了
+\item 练习,大量的练习
+
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{操作符与表达式}
+\begin{enumerate}
+\item 加减乘除取余都没什么变化,除法还要注意类型
+\item 逻辑与和或变得更清楚了
+\item 字符串不但能做加法,还能做乘法
+\item 先乘除后加减,剩下的东西都加括号
+\item 自增运算符(++,-- --)不能用了,但简化运算符(+=,-=)还是可以用的
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{条件语句if}
+\begin{enumerate}
+\item 三目运算符什么的就不要指望了
+\item if语句和C语言的差不多
+\item 冒号问题
+\item 缩进!一定要注意缩进!
+
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{定义函数}
+\begin{enumerate}
+\item 主函数什么的完全没有(或者说仅仅是看不到了),程序的入口就是第一行
+\item 用def定义函数
+\item 声明什么的就不要想了,不过可以单独写一个文件然后import进去
+\item 良好的抽象封装习惯可以让你少写很多代码,看代码的人也会很开心
+\item 刀叉的作用是将食物分解方便食用,函数也一样(分治法)
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{while循环}
+\begin{enumerate}
+\item 和for的用法差不多,学过C语言的人一看就明白了
+\item 缩进,还是缩进!
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{列表(list)}
+\begin{enumerate}
+\item C语言中列表是定长的,而列表是可变长度的
+\item 可以把列表当成单链表来用
+\item 下标是负数会怎么样?
+\item 遍历一个列表
+\item 列表操作 (乘法尤其要注意!)
+\item 列表切片
+\item 求列表长度
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{列表方法}
+\begin{enumerate}
+\item 枚举(enumerate)
+\item 附加(append)
+\item 删除(pop,del,remove的区别) %pop有返回值,del没有,remove是根据元素来删除
+\item 列表转字符串(list,join)
+\item 字符串转列表(split)
+\item 统计出现次数(count)
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}{$\lambda$表达式与函数式编程}
+\begin{enumerate}
+\item 匿名函数:lambda
+\item 迭代更新的简单方法:map
+\item 把列表缩减为单值:reduce
+\item 过滤函数:filter
+
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+\begin{enumerate}
+\item
+
+\end{enumerate}
+
+\end{frame}
+
+
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

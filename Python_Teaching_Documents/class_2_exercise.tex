@@ -1,0 +1,153 @@
+%注意保存的文件名不能有中文
+%编译方式:XeLaTeX    
+        
+\documentclass[12pt,a4paper]{article}  
+	\usepackage{xeCJK}	%中文环境
+		\usepackage{float}	%支持浮动体参数H(大写)
+%注意右下角换成utf-8的
+\usepackage{graphicx}	%插图命令包
+    \setCJKmainfont{SimSun}	%设置字体
+\usepackage{titlesec}	
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{listings}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\newfontfamily\arial{Arial}
+\newcommand{\sectionfontsize}{\fontsize{12pt}{12pt}\selectfont}
+%\titleformat{\section}[hang]{\bfseries\arial\sectionfontsize}{\thesection}{1em}{}{}
+
+
+\title{第二章需求文档}	%题目作者日期
+\author{田雅夫}
+\date{\today}
+\bibliographystyle{plain}	%参考文献格式
+
+
+\begin{document}
+
+\maketitle
+
+\begin{figure}[H]
+1.给定任意正整数$n$,实现
+\begin{equation}
+\sum^{n}_{i=1}2i+3
+\end{equation}
+\end{figure}
+
+\begin{figure}[H]
+2.为一只兔子管理它的萝卜数量,输入初始的萝卜数量$n$.提供下面几个功能:
+\begin{enumerate}
+\item 买入(buy),买入给定量的萝卜,然后格式输出"Now rabbit have 3 carrorts"(示例)
+\item 吃掉(eat),吃掉给定数量的萝卜,然后格式输出"Chunch,Chunch(换行)Now rabbit have 3 carrorts(示例)"
+\item 查询(num),返回当前的萝卜数量,格式输出"Number of carrorts is 3"(示例)
+\end{enumerate}
+\end{figure}
+
+\begin{figure}[H]
+3.给定正整数n,输出小于n的所有素数.
+\end{figure}
+
+\begin{figure}[H]
+4.想一个方法在字符界面中输出兔子和萝卜数量的直方图
+
+数据如下:\\
+Tom:20,Jack:50,Jerry:35,Marry:20,Jason:80,Wilson:70,Perl:30,Ruby:20,Java:5,Python:100
+\end{figure}
+
+\begin{figure}[H]
+5.时间的加减:
+
+给定一个初始时间(小时:分钟:秒),要求实现:
+\begin{enumerate}
+\item 加上一段给定时间
+\item 减去一段给定时间
+\item 格式输出输出时间
+\end{enumerate}
+\end{figure}
+
+\begin{figure}[H]
+6.以下的代码是如何工作的?
+\begin{lstlisting}[language=Python]
+def add(number):
+    if number <= 50:
+        print "Number is %s" %number
+        add(number + 1)
+     
+\end{lstlisting}
+改动代码,看看这个递归可以执行多少次.(我的电脑跑了973次,不同的电脑配置,不同的Python版本均会导致这个数字的变化)
+\end{figure}
+
+\begin{figure}[H]
+7.以下的代码为什么不好用?改动代码使其可以实现自增的工作.
+\begin{lstlisting}
+a = 5
+def add(b):
+    b += 1
+
+add(a)
+
+print a    
+\end{lstlisting}
+\end{figure}
+
+\begin{figure}[H]
+8.给定正整数n,计算n的阶乘.
+\end{figure}
+
+\begin{figure}[H]
+9.$m$个人围成一圈,从第一个人开始按顺序报号 $1,2,3,\dots $凡报到$n$者退出圈子(要求输入正整数$m,n$),编写代码给出出圈次序.
+\end{figure}
+
+\begin{figure}[H]
+10.已知一个网站上图片的URL格式如下:
+\begin{quote}
+$url:http://www.python.org/s/pic/***/*******$
+\end{quote}
+
+其中***部分取值为000至233,*******部分为a00001到a0005,b00001到b00005\dots 要求格式输出所有的图片URL
+\end{figure}
+
+
+
+    \end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

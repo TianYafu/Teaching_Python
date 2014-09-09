@@ -1,0 +1,144 @@
+%注意保存的文件名不能有中文
+%编译方式:XeLaTeX    
+        
+\documentclass[12pt,a4paper]{article}  
+	\usepackage{xeCJK}	%中文环境
+		\usepackage{float}	%支持浮动体参数H(大写)
+%注意右下角换成utf-8的
+\usepackage{graphicx}	%插图命令包
+    \setCJKmainfont{SimSun}	%设置字体
+\usepackage{titlesec}	
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{listings}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\newfontfamily\arial{Arial}
+\newcommand{\sectionfontsize}{\fontsize{12pt}{12pt}\selectfont}
+%\titleformat{\section}[hang]{\bfseries\arial\sectionfontsize}{\thesection}{1em}{}{}
+
+
+\title{Python基本命令与操作}	%题目作者日期
+\author{田雅夫}
+\date{\today}
+\bibliographystyle{plain}	%参考文献格式
+
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+\item help()  查看一个对象的帮助文档
+
+\item type()  查看变量/对象/一切事物的类型
+
+\item global  在函数中使用外部变量的话用 , 例: global a
+
+\item def  定义一个函数,注意冒号,缩进
+
+\item print 输出
+
+\item input()  输入,接受一个字符串参数
+
+\item and or not  逻辑与,逻辑或,逻辑非
+
+\item int(),str() 强制类型转换
+
+\item if(): 判断语句,注意冒号,缩进
+
+\item else: 流程控制,注意冒号,缩进
+
+\item elif():  流程控制,代替switch
+
+\item while(): 循环,注意冒号,缩进
+
+\item for i in range(n): 产生一个n次的循环,循环中i取值为0到n-1
+
+\item range() 产生列表,接受一个,两个和三个参数
+
+\item list.append() 在列表后面附加元素
+
+\item list.pop()  删除指定下标的元素,返回被删除元素
+
+\item list.remove()  删除指定元素,没有返回值
+
+\item del list[]  删除指定下标的元素,没有返回值
+
+\item for i,j in enumerate(list):或for j in list: \\迭代一个列表,i为列表中每个元素的下标,j为列表中的元素
+
+\item list.count()  统计指定元素在列表中的出现次数
+
+\item list(str)  字符串转列表
+
+\item str.join(list) 列表在给定字符串下结合字符串
+
+\item str.split(list)  字符串
+
+\item lambda parameters:function 匿名函数 例  lambda x,y,z:(2*x+y-z)
+
+\item map(func,iterable)  对可迭代对象(列表,元组,字典)中每个元素a用func(a)代替.func要求为单参数单返回值函数
+
+\item reduce(func,iterable)  对可迭代对象中元素顺次使用func()使得列表缩减为单个元素
+
+\item filter(func,iterable)  func要求返回值只能为True或False,返回一个能使func()返回值为真的对象
+
+\item len(list/str)  返回列表/字符串长度
+
+\end{enumerate}
+
+\vspace{5cm}
+
+\begin{enumerate}
+\item 忘记在 if , elif, else, for, while, class,def声明末尾添加 ：（导致 “SyntaxError ：invalid syntax”）
+\item 3）错误的使用缩进量。（导致“IndentationError：unexpected indent”、“IndentationError：unindent does not match any outer indetation level”以及“IndentationError：expected an indented block”）
+\item  在字符串首尾忘记加引号（导致“SyntaxError: EOL while scanning string literal”）
+\item  交互模式下忘记添加新行（导致 “SyntaxError ：invalid syntax”）,交互模式下每一行以">>>"开头
+\item  方法名拼写错误（导致 “AttributeError: 'str' object has no attribute 'apppppppend'”）
+\item  引用超过list最大索引（导致“IndexError: list index out of range”）
+\item  尝试使用Python关键字作为变量名（导致“SyntaxError：invalid syntax”）
+\item  在定义局部变量前在函数中使用局部变量（此时有与局部变量同名的全局变量存在）（导致“UnboundLocalError: local variable 'foobar' referenced before assignment”）
+
+\end{enumerate}
+
+    \end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

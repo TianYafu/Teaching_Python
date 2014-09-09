@@ -1,0 +1,94 @@
+%注意保存的文件名不能有中文
+%编译方式:XeLaTeX    
+        
+\documentclass[12pt,a4paper]{article}  
+	\usepackage{xeCJK}	%中文环境
+		\usepackage{float}	%支持浮动体参数H(大写)
+%注意右下角换成utf-8的
+\usepackage{graphicx}	%插图命令包
+    \setCJKmainfont{SimSun}	%设置字体
+\usepackage{titlesec}	
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{listings}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\newfontfamily\arial{Arial}
+\newcommand{\sectionfontsize}{\fontsize{12pt}{12pt}\selectfont}
+%\titleformat{\section}[hang]{\bfseries\arial\sectionfontsize}{\thesection}{1em}{}{}
+
+
+\title{第一章:了解Python}	%题目作者日期
+\author{田雅夫}
+\date{\today}
+\bibliographystyle{plain}	%参考文献格式
+
+
+\begin{document}
+
+\maketitle
+\begin{figure}[P]
+\centering
+\tableofcontents
+\end{figure}
+
+\section{Python与C的差异}
+\begin{enumerate}
+\item 编译器,解释器的差异
+\item 抽象层次的差异
+\item 语法的差异%更优雅,可读性更强 
+\item 执行效率的差异
+\end{enumerate}
+
+\subsection{编译器,解释器的差异}
+在C语言中,代码是经过整体编译变成机器码然后执行的.而在Python中代码是按行执行的.
+
+\section{解释器语言的特点}
+
+\section{弱类型语言注意事项}
+
+\section{良好的代码风格}
+
+
+测试用文档模板
+    \end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
